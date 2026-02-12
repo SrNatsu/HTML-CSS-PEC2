@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nosotros | Cine & Letras</title>
+
+  <meta name="author" content="Adrián Galán Pacheco">
+  <!-- TODO: Fix description -->
+  <meta name="description" content="Formulario cine y letras">
+
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>cine&letras</h1>
+
+    <nav>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="actividades.html">Actividades</a></li>
+        <li><a href="formulario.html" class="active">Hazte socio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <header>
+      <h2>Sé parte de Cines y letras</h2>
+      <p>Un libro, una película, un debate... ¡únete!</p>
+    </header>
+
+    <form action="#" method="POST">
+      <p><small>Los campos señalados con <span>*</span> son obligatorios.</small></p>
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="name">
+          Nombre <span>*</span>
+          <input type="text" name="name" id="name" required>
+        </label>
+
+        <label for="surnames">
+          Apellidos <span>*</span>
+          <input type="text" name="surnames" id="surnames" required>
+        </label>
+
+        <label for="email">
+          Email <span>*</span>
+          <input type="email" name="email" id="email" required>
+        </label>
+
+        <label for="tel">
+          Teléfono de contacto
+          <input type="tel" name="tel" id="tel">
+        </label>
+
+        <label for="birthdate">
+          Fecha de nacimiento <span>*</span>
+          <input type="date" name="birthdate" id="birthdate" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cuota y datos bancarios</legend>
+
+        <label for="fee">
+          Tipo de cuota de socio <span>*</span>
+          <select name="fee" id="fee" required>
+            <option value="" disabled selected>Elige una opción</option>
+            <option value="30">Mensual 30 euros</option>
+            <option value="150">Semestral 150 euros</option>
+            <option value="290">Anual 290 euros</option>
+          </select>
+        </label>
+
+        <label for="account">
+          Número de cuenta corriente (IBAN) <span>*</span>
+          <input type="text" placeholder="ES61 1234 3456 42 0456323532" min="24" max="28" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias literarias y cinematográficas</legend>
+
+        <label for="hobby">
+          ¿Qué haces más a menudo: leer o ver cine?
+
+          <select name="hobby" id="hobby">
+            <option value="" disabled selected>Elige una opción</option>
+            <option value="1">Leo más que veo cine</option>
+            <option value="2">Veo más cine que leo</option>
+            <option value="3">Equilibro cine y lectura</option>
+            <option value="4">Leo libros y veo cine ocasionalmente</option>
+          </select>
+        </label>
+
+        <label for="book-genre">
+          Géneros literarios preferidos
+
+          <input type="checkbox" name="book-genre" id="contemporary"> Novela contemporánea
+          <input type="checkbox" name="book-genre" id="historical"> Novela histórica
+          <input type="checkbox" name="book-genre" id="graphical"> Novela gráfica
+          <input type="checkbox" name="book-genre" id="sci-fi"> Ciencia ficción
+          <input type="checkbox" name="book-genre" id="horror"> Terror
+          <input type="checkbox" name="book-genre" id="mystery"> Misterio y novela negra
+          <input type="checkbox" name="book-genre" id="romantic"> Romántica
+          <input type="checkbox" name="book-genre" id="adventures"> Aventuras
+        </label>
+
+        <label for="film-genre">
+          Géneros cinematográficos preferidos
+
+          <input type="checkbox" name="film-genre" id="drama"> Drama
+          <input type="checkbox" name="film-genre" id="comedy"> Comedia
+          <input type="checkbox" name="film-genre" id="thriller"> <i>Thriller</i>
+          <input type="checkbox" name="film-genre" id="sci-fi"> Ciencia ficción
+          <input type="checkbox" name="film-genre" id="animation"> Animación
+          <input type="checkbox" name="film-genre" id="classics"> Clásicos
+        </label>
+
+        <label for="preferences">
+          ¿Prefieres ver una película/serie basada en un libro antes o después de leer el libro?
+
+          <input type="radio" name="preferences" id="before"> Antes
+          <input type="radio" name="preferences" id="after"> Después
+          <input type="radio" name="preferences" id="idc"> Me es indiferente
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu interés y disponibilidad</legend>
+
+        <label for="motivation">
+          ¿Cuál es tu motivación para unirte a Cine y letras? <span>*</span>
+
+          <textarea name="motivation" id="motivation" required></textarea>
+        </label>
+
+        <label for="availability">
+          Disponibilidad para sesiones <span>*</span>
+
+          <input type="radio" name="availability" id="week" required> Entre semana
+          <input type="radio" name="availability" id="weekend" required> Fines de semana
+          <input type="radio" name="availability" id="both" required> Ambos
+        </label>
+      </fieldset>
+
+      <p><small>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE CINE Y LETRAS. <strong>Finalidades:</strong> recogida de datos
+          para la inscripción como socio del club CINE Y LETRAS. <strong>Legitimación:</strong> consentimiento del
+          interesado. <strong>Destinatarios:</strong> no están previstas cesiones de datos a terceros, salvo por
+          obligación legal. <strong>Derechos:</strong> puede retirar su consentimiento en cualquier momento, así como
+          acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a
+            href="mailto:info@cineyletras.net">info@cineyletras.net</a>. <strong>Información adicional:</strong> puede
+          ampliar la información en el enlace de <a href="">Aviso Legal</a> y <a href="">Política de
+            privacidad</a>.</small></p>
+
+      <input type="checkbox" name="acceptance" id="acceptance" required> He leído y acepto la política de privacidad
+      <span>*</span>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <p><abbr title="Universitat Oberta de Catalunya">UOC</abbr>. Mayo de 2025. Adrián Galán Pacheco</p>
+
+    <ul>
+      <li><a href="">Aviso legal</a></li>
+      <li><a href="">Política de privacidad</a></li>
+      <li><a href="">Política de <i lang="en">cookies</i></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
