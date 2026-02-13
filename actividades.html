@@ -8,23 +8,27 @@
   <title>Nosotros | Cine & Letras</title>
 
   <meta name="author" content="Adrián Galán Pacheco">
-  <!-- TODO: Fix description -->
-  <meta name="description" content="Actividades cine y letras">
+  <meta name="description" content="Explora las actividades para el primer semestre de 2025 del club Cine y letras.">
 
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/estilos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <header>
-    <h1>cine&letras</h1>
+    <h1><a href="index.html" class="web-title">cine<span>&</span>letras</a></h1>
 
     <nav>
       <ul>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="actividades.html" class="active">Actividades</a></li>
-        <li><a href="formulario.html">Hazte socio</a></li>
+        <li><a href="nosotros.html" class="link-menu">Nosotros</a></li>
+        <li><a href="actividades.html" class="link-menu active">Actividades</a></li>
+        <li><a href="formulario.html" class="link-menu">Hazte socio</a></li>
       </ul>
     </nav>
   </header>
@@ -33,93 +37,103 @@
 
     <header>
       <h2>Actividades: primer semestre 2025</h2>
-      <p>Sesión a sesión: un viaje entre páginas y escenas</p>
+      <p class="subsubtitle">Sesión a sesión: un viaje entre páginas y escenas</p>
     </header>
 
-    <table>
+    <table class="container">
       <caption>
         SESIONES DE ENERO A JUNIO DE 2025
       </caption>
-      
+
       <thead>
         <tr>
-          <th>SESIONES</th>
-          <th>FECHAS</th>
-          <th>OBRA LITERARIA</th>
-          <th>ADAPTACIÓN CINEMATOGRÁFICA</th>
-          <th>TEMAS A ANALIZAR</th>
+          <th scope="col">SESIONES</th>
+          <th scope="col">FECHAS</th>
+          <th scope="col">OBRA LITERARIA</th>
+          <th scope="col">ADAPTACIÓN CINEMATOGRÁFICA</th>
+          <th scope="col">TEMAS A ANALIZAR</th>
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <td>6</td>
-          <td>14 de enero a 31 de enero <span>martes y viernes</span></td>
+          <td><span class="wrapper">6</span></td>
+          <td><time datetime="2025-01-14">14 de enero</time> a <time datetime="2025-01-31">31 de enero</time> <span
+              class="date">martes y viernes</span></td>
           <td><cite>Orgullo y prejuicio</cite> (1813, Jane Austen)</td>
           <td><cite>Orgullo y prejuicio</cite> (2005, Joe Wright)</td>
           <td>Fidelidad al texto, representación de los personajes, ambientación…</td>
         </tr>
 
         <tr>
-          <td>5</td>
-          <td>3 de febrero a 17 de febrero</td>
+          <td><span class="wrapper">5</span></td>
+          <td><time datetime="2025-02-03">3 de febrero</time> a <time datetime="2025-02-17">17 de febrero</time> <span
+              class="date">lunes y miércoles</span></td>
           <td><cite>Drácula</cite> (1897, Bram Stoker)</td>
           <td><cite>Drácula de Bram Stoker</cite> (1992, Francis Ford Coppola)</td>
           <td>Adaptación de la estructura epistolar, cambios en la narrativa, libertades creativas del director…</td>
         </tr>
 
         <tr>
-          <td>2</td>
-          <td>29 de marzo y 30 de marzo <span>sábado y domingo</span></td>
+          <td><span class="wrapper">2</span></td>
+          <td><time datetime="2025-03-29">29 de marzo</time> y <time datetime="2025-03-30">30 de marzo</time> <span
+              class="date">sábado y domingo</span></td>
           <td><cite>1984</cite> (1949, George Orwell)</td>
           <td><cite>1984</cite> (1984, Michael Radford)</td>
           <td>Representación del control social, diferencias con la novela…</td>
         </tr>
 
         <tr>
-          <td>4</td>
-          <td>15 de abril a 24 de abril <span>martes y jueves</span></td>
+          <td><span class="wrapper">4</span></td>
+          <td><time datetime="2025-04-15">15 de abril</time> a <time datetime="2025-05-24">24 de abril</time> <span
+              class="date">martes y jueves</span></td>
           <td><cite>Matar a un ruiseñor</cite> (1960, Harper Lee)</td>
           <td><cite>Matar a un ruiseñor</cite> (1962, Robert Mulligan)</td>
-          <td>Justicia y racismo, análisis de la fidelidad de la adaptación, tratamiento de los personajes y de la ambientación… </td>
+          <td>Justicia y racismo, análisis de la fidelidad de la adaptación, tratamiento de los personajes y de la
+            ambientación… </td>
         </tr>
 
         <tr>
-          <td>3</td>
-          <td>15 de mayo a 29 de mayo <span>jueves</span></td>
+          <td><span class="wrapper">3</span></td>
+          <td><time datetime="2025-05-15">15 de mayo</time> a <time datetime="2025-05-29">29 de mayo</time> <span
+              class="date">jueves</span></td>
           <td><cite>El nombre de la rosa</cite> (1980, Umberto Eco)</td>
           <td><cite>El nombre de la rosa</cite> (1986, Jean-Jacques Annaud)</td>
-          <td>Adaptación de una novela compleja, pérdida de la temática política y filosófica, simplificación de la trama…</td>
+          <td>Adaptación de una novela compleja, pérdida de la temática política y filosófica, simplificación de la
+            trama…</td>
         </tr>
 
         <tr>
-          <td>7</td>
-          <td>4 de junio a 25 de junio <span>miércoles y viernes</span></td>
+          <td><span class="wrapper">7</span></td>
+          <td><time datetime="2025-06-04">4 de junio</time> a <time datetime="2025-06-25">25 de junio</time> <span
+              class="date">miércoles y viernes</span></td>
           <td><cite>Gente normal</cite> (2019, Sally Rooney)</td>
           <td><cite>Gente normal</cite> (2020, Lenny Abrahamson y Hettie Macdonald)</td>
-          <td>Tratamiento de los personajes principales y secundarios en cada episodio de la serie, adaptación de los aspectos más introspectivos de la historia…</td>
+          <td>Tratamiento de los personajes principales y secundarios en cada episodio de la serie, adaptación de los
+            aspectos más introspectivos de la historia…</td>
         </tr>
       </tbody>
 
-      <tfoot>
+      <tfoot class="tfoot">
         <tr>
-          <td>
-            <p><small>Solo para miembros del club. <a href="formulario.html">Hazte socio</a>.</small></p>
+          <td colspan="5">
+            <p><small>Solo para miembros del club. <a href="formulario.html" class="link-text">Hazte socio</a>.</small>
+            </p>
             <p><small>Es necesario reservar con antelación para cada ciclo de sesiones.</small></p>
           </td>
         </tr>
       </tfoot>
     </table>
-    
+
   </main>
 
   <footer>
-    <p><abbr title="Universitat Oberta de Catalunya">UOC</abbr>. Mayo de 2025. Adrián Galán Pacheco</p>
+    <p><abbr title="Universitat Oberta de Catalunya" lang="ca">UOC</abbr>. Mayo de 2025. Adrián Galán Pacheco</p>
 
     <ul>
-      <li><a href="">Aviso legal</a></li>
-      <li><a href="">Política de privacidad</a></li>
-      <li><a href="">Política de <i lang="en">cookies</i></a></li>
+      <li><a href="" class="link-menu footer">Aviso legal</a></li>
+      <li><a href="" class="link-menu footer">Política de privacidad</a></li>
+      <li><a href="" class="link-menu footer">Política de <i lang="en">cookies</i></a></li>
     </ul>
   </footer>
 </body>

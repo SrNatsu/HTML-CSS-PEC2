@@ -8,23 +8,27 @@
   <title>Nosotros | Cine & Letras</title>
 
   <meta name="author" content="Adrián Galán Pacheco">
-  <!-- TODO: Fix description -->
-  <meta name="description" content="Formulario cine y letras">
+  <meta name="description" content="Únete al club Cine y letras rellenando el formulario.">
 
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/estilos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <header>
-    <h1>cine&letras</h1>
+    <h1><a href="index.html" class="web-title">cine<span>&</span>letras</a></h1>
 
     <nav>
       <ul>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="actividades.html">Actividades</a></li>
-        <li><a href="formulario.html" class="active">Hazte socio</a></li>
+        <li><a href="nosotros.html" class="link-menu">Nosotros</a></li>
+        <li><a href="actividades.html" class="link-menu">Actividades</a></li>
+        <li><a href="formulario.html" class="link-menu active">Hazte socio</a></li>
       </ul>
     </nav>
   </header>
@@ -33,27 +37,27 @@
 
     <header>
       <h2>Sé parte de Cines y letras</h2>
-      <p>Un libro, una película, un debate... ¡únete!</p>
+      <p class="subsubtitle">Un libro, una película, un debate... ¡únete!</p>
     </header>
 
-    <form action="#" method="POST">
-      <p><small>Los campos señalados con <span>*</span> son obligatorios.</small></p>
+    <form action="#" method="POST" class="container">
+      <p><small>Los campos señalados con <span class="required">*</span> son obligatorios.</small></p>
 
       <fieldset>
         <legend>Datos personales</legend>
 
         <label for="name">
-          Nombre <span>*</span>
+          Nombre <span class="required">*</span>
           <input type="text" name="name" id="name" required>
         </label>
 
         <label for="surnames">
-          Apellidos <span>*</span>
+          Apellidos <span class="required">*</span>
           <input type="text" name="surnames" id="surnames" required>
         </label>
 
         <label for="email">
-          Email <span>*</span>
+          Correo electrónico <span class="required">*</span>
           <input type="email" name="email" id="email" required>
         </label>
 
@@ -63,7 +67,7 @@
         </label>
 
         <label for="birthdate">
-          Fecha de nacimiento <span>*</span>
+          Fecha de nacimiento <span class="required">*</span>
           <input type="date" name="birthdate" id="birthdate" required>
         </label>
       </fieldset>
@@ -72,7 +76,8 @@
         <legend>Cuota y datos bancarios</legend>
 
         <label for="fee">
-          Tipo de cuota de socio <span>*</span>
+          Tipo de cuota de socio <span class="required">*</span>
+          
           <select name="fee" id="fee" required>
             <option value="" disabled selected>Elige una opción</option>
             <option value="30">Mensual 30 euros</option>
@@ -82,7 +87,7 @@
         </label>
 
         <label for="account">
-          Número de cuenta corriente (IBAN) <span>*</span>
+          Número de cuenta corriente (IBAN) <span class="required">*</span>
           <input type="text" placeholder="ES61 1234 3456 42 0456323532" min="24" max="28" required>
         </label>
       </fieldset>
@@ -102,36 +107,86 @@
           </select>
         </label>
 
-        <label for="book-genre">
-          Géneros literarios preferidos
+        <div class="genres">
+          <label for="book-genre">
+            <p class="label">Géneros literarios preferidos</p>
 
-          <input type="checkbox" name="book-genre" id="contemporary"> Novela contemporánea
-          <input type="checkbox" name="book-genre" id="historical"> Novela histórica
-          <input type="checkbox" name="book-genre" id="graphical"> Novela gráfica
-          <input type="checkbox" name="book-genre" id="sci-fi"> Ciencia ficción
-          <input type="checkbox" name="book-genre" id="horror"> Terror
-          <input type="checkbox" name="book-genre" id="mystery"> Misterio y novela negra
-          <input type="checkbox" name="book-genre" id="romantic"> Romántica
-          <input type="checkbox" name="book-genre" id="adventures"> Aventuras
-        </label>
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="contemporary"> Novela contemporánea
+            </div>
 
-        <label for="film-genre">
-          Géneros cinematográficos preferidos
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="historical"> Novela histórica
+            </div>
 
-          <input type="checkbox" name="film-genre" id="drama"> Drama
-          <input type="checkbox" name="film-genre" id="comedy"> Comedia
-          <input type="checkbox" name="film-genre" id="thriller"> <i>Thriller</i>
-          <input type="checkbox" name="film-genre" id="sci-fi"> Ciencia ficción
-          <input type="checkbox" name="film-genre" id="animation"> Animación
-          <input type="checkbox" name="film-genre" id="classics"> Clásicos
-        </label>
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="graphical"> Novela gráfica
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="sci-fi"> Ciencia ficción
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="horror"> Terror
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="mystery"> Misterio y novela negra
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="romantic"> Romántica
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="book-genre" id="adventures"> Aventuras
+            </div>
+          </label>
+
+          <label for="film-genre">
+            <p class="label">Géneros cinematográficos preferidos</p>
+            
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="drama"> Drama
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="comedy"> Comedia
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="thriller"> <i>Thriller</i>
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="sci-fi"> Ciencia ficción
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="animation"> Animación
+            </div>
+
+            <div class="checkbox-genres">
+              <input type="checkbox" name="film-genre" id="classics"> Clásicos
+            </div>
+          </label>
+        </div>
 
         <label for="preferences">
-          ¿Prefieres ver una película/serie basada en un libro antes o después de leer el libro?
+          <p class="label">¿Prefieres ver una película/serie basada en un libro antes o después de leer el libro?</p>
 
-          <input type="radio" name="preferences" id="before"> Antes
-          <input type="radio" name="preferences" id="after"> Después
-          <input type="radio" name="preferences" id="idc"> Me es indiferente
+          <div class="radio">
+            <input type="radio" name="preferences" id="before"> Antes
+          </div>
+
+          <div class="radio">
+            <input type="radio" name="preferences" id="after"> Después
+          </div>
+
+          <div class="radio">
+            <input type="radio" name="preferences" id="idc"> Me es indiferente
+          </div>
         </label>
       </fieldset>
 
@@ -139,17 +194,23 @@
         <legend>Tu interés y disponibilidad</legend>
 
         <label for="motivation">
-          ¿Cuál es tu motivación para unirte a Cine y letras? <span>*</span>
+          ¿Cuál es tu motivación para unirte a Cine y letras? <span class="required">*</span>
 
           <textarea name="motivation" id="motivation" required></textarea>
         </label>
 
         <label for="availability">
-          Disponibilidad para sesiones <span>*</span>
+          <p class="label">Disponibilidad para sesiones <span class="required">*</span></p>
 
-          <input type="radio" name="availability" id="week" required> Entre semana
-          <input type="radio" name="availability" id="weekend" required> Fines de semana
-          <input type="radio" name="availability" id="both" required> Ambos
+          <div class="radio">
+            <input type="radio" name="availability" id="week" required> Entre semana
+          </div>
+          <div class="radio">
+            <input type="radio" name="availability" id="weekend" required> Fines de semana
+          </div>
+          <div class="radio">
+            <input type="radio" name="availability" id="both" required> Ambos
+          </div>
         </label>
       </fieldset>
 
@@ -158,25 +219,27 @@
           interesado. <strong>Destinatarios:</strong> no están previstas cesiones de datos a terceros, salvo por
           obligación legal. <strong>Derechos:</strong> puede retirar su consentimiento en cualquier momento, así como
           acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a
-            href="mailto:info@cineyletras.net">info@cineyletras.net</a>. <strong>Información adicional:</strong> puede
-          ampliar la información en el enlace de <a href="">Aviso Legal</a> y <a href="">Política de
+            href="mailto:info@cineyletras.net" class="link-text">info@cineyletras.net</a>. <strong>Información adicional:</strong> puede
+          ampliar la información en el enlace de <a href="" class="link-text">Aviso Legal</a> y <a href="" class="link-text">Política de
             privacidad</a>.</small></p>
 
-      <input type="checkbox" name="acceptance" id="acceptance" required> He leído y acepto la política de privacidad
-      <span>*</span>
+      <div class="checkbox">
+        <input type="checkbox" name="acceptance" id="acceptance" required> He leído y acepto la política de privacidad
 
-      <button type="submit">Enviar</button>
+        <span class="required">*</span>
+      </div>
+
+      <button type="submit" class="form-button">Enviar</button>
     </form>
 
   </main>
 
   <footer>
-    <p><abbr title="Universitat Oberta de Catalunya">UOC</abbr>. Mayo de 2025. Adrián Galán Pacheco</p>
-
+    <p><abbr title="Universitat Oberta de Catalunya" lang="ca">UOC</abbr>. Mayo de 2025. Adrián Galán Pacheco</p>
     <ul>
-      <li><a href="">Aviso legal</a></li>
-      <li><a href="">Política de privacidad</a></li>
-      <li><a href="">Política de <i lang="en">cookies</i></a></li>
+      <li><a href="" class="link-menu footer">Aviso legal</a></li>
+      <li><a href="" class="link-menu footer">Política de privacidad</a></li>
+      <li><a href="" class="link-menu footer">Política de <i lang="en">cookies</i></a></li>
     </ul>
   </footer>
 </body>
