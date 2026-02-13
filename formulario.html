@@ -46,57 +46,58 @@
       <fieldset>
         <legend>Datos personales</legend>
 
-        <label for="name">
-          Nombre <span class="required">*</span>
+        <div class="field">
+          <label for="name">Nombre <span class="required">*</span></label>
           <input type="text" name="name" id="name" required>
-        </label>
+        </div>
 
-        <label for="surnames">
-          Apellidos <span class="required">*</span>
+        <div class="field">
+          <label for="surnames">Apellidos <span class="required">*</span></label>
           <input type="text" name="surnames" id="surnames" required>
-        </label>
+        </div>
 
-        <label for="email">
-          Correo electrónico <span class="required">*</span>
+        <div class="field">
+          <label for="email">Correo electrónico <span class="required">*</span></label>
           <input type="email" name="email" id="email" required>
-        </label>
+        </div>
 
-        <label for="tel">
-          Teléfono de contacto
+        <div class="field">
+          <label for="tel">Teléfono de contacto</label>
           <input type="tel" name="tel" id="tel">
-        </label>
+        </div>
 
-        <label for="birthdate">
-          Fecha de nacimiento <span class="required">*</span>
+        <div class="field">
+          <label for="birthdate">Fecha de nacimiento <span class="required">*</span></label>
           <input type="date" name="birthdate" id="birthdate" required>
-        </label>
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>Cuota y datos bancarios</legend>
 
-        <label for="fee">
-          Tipo de cuota de socio <span class="required">*</span>
-          
+        <div class="field">
+          <label for="fee">Tipo de cuota de socio <span class="required">*</span></label>
+
           <select name="fee" id="fee" required>
             <option value="" disabled selected>Elige una opción</option>
             <option value="30">Mensual 30 euros</option>
             <option value="150">Semestral 150 euros</option>
             <option value="290">Anual 290 euros</option>
           </select>
-        </label>
+        </div>
 
-        <label for="account">
-          Número de cuenta corriente (IBAN) <span class="required">*</span>
-          <input type="text" placeholder="ES61 1234 3456 42 0456323532" min="24" max="28" required>
-        </label>
+        <div class="field">
+          <label for="account">Número de cuenta corriente (IBAN) <span class="required">*</span></label>
+          <input type="text" id="account" placeholder="ES61 1234 3456 42 0456323532" minlength="24" maxlength="28"
+            required>
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>Preferencias literarias y cinematográficas</legend>
 
-        <label for="hobby">
-          ¿Qué haces más a menudo: leer o ver cine?
+        <div class="field">
+          <label for="hobby">¿Qué haces más a menudo: leer o ver cine?</label>
 
           <select name="hobby" id="hobby">
             <option value="" disabled selected>Elige una opción</option>
@@ -105,11 +106,11 @@
             <option value="3">Equilibro cine y lectura</option>
             <option value="4">Leo libros y veo cine ocasionalmente</option>
           </select>
-        </label>
+        </div>
 
         <div class="genres">
-          <label for="book-genre">
-            <p class="label">Géneros literarios preferidos</p>
+          <fieldset>
+            <legend>Géneros literarios preferidos</legend>
 
             <div class="checkbox-genres">
               <input type="checkbox" name="book-genre" id="contemporary"> Novela contemporánea
@@ -124,7 +125,7 @@
             </div>
 
             <div class="checkbox-genres">
-              <input type="checkbox" name="book-genre" id="sci-fi"> Ciencia ficción
+              <input type="checkbox" name="book-genre" id="sci-fi-book"> Ciencia ficción
             </div>
 
             <div class="checkbox-genres">
@@ -142,11 +143,11 @@
             <div class="checkbox-genres">
               <input type="checkbox" name="book-genre" id="adventures"> Aventuras
             </div>
-          </label>
+          </fieldset>
 
-          <label for="film-genre">
-            <p class="label">Géneros cinematográficos preferidos</p>
-            
+          <fieldset>
+            <legend>Géneros cinematográficos preferidos</legend>
+
             <div class="checkbox-genres">
               <input type="checkbox" name="film-genre" id="drama"> Drama
             </div>
@@ -160,7 +161,7 @@
             </div>
 
             <div class="checkbox-genres">
-              <input type="checkbox" name="film-genre" id="sci-fi"> Ciencia ficción
+              <input type="checkbox" name="film-genre" id="sci-fi-film"> Ciencia ficción
             </div>
 
             <div class="checkbox-genres">
@@ -170,11 +171,12 @@
             <div class="checkbox-genres">
               <input type="checkbox" name="film-genre" id="classics"> Clásicos
             </div>
-          </label>
+          </fieldset>
         </div>
 
-        <label for="preferences">
-          <p class="label">¿Prefieres ver una película/serie basada en un libro antes o después de leer el libro?</p>
+        <fieldset>
+          <legend>¿Prefieres ver una película/serie basada en un libro antes o después de leer el
+            libro?</legend>
 
           <div class="radio">
             <input type="radio" name="preferences" id="before"> Antes
@@ -187,7 +189,7 @@
           <div class="radio">
             <input type="radio" name="preferences" id="idc"> Me es indiferente
           </div>
-        </label>
+        </fieldset>
       </fieldset>
 
       <fieldset>
@@ -199,8 +201,8 @@
           <textarea name="motivation" id="motivation" required></textarea>
         </label>
 
-        <label for="availability">
-          <p class="label">Disponibilidad para sesiones <span class="required">*</span></p>
+        <fieldset>
+        <legend>Disponibilidad para sesiones <span class="required">*</span></legend>
 
           <div class="radio">
             <input type="radio" name="availability" id="week" required> Entre semana
@@ -211,16 +213,18 @@
           <div class="radio">
             <input type="radio" name="availability" id="both" required> Ambos
           </div>
-        </label>
+        
+        </fieldset>
       </fieldset>
 
       <p><small>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE CINE Y LETRAS. <strong>Finalidades:</strong> recogida de datos
           para la inscripción como socio del club CINE Y LETRAS. <strong>Legitimación:</strong> consentimiento del
           interesado. <strong>Destinatarios:</strong> no están previstas cesiones de datos a terceros, salvo por
           obligación legal. <strong>Derechos:</strong> puede retirar su consentimiento en cualquier momento, así como
-          acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a
-            href="mailto:info@cineyletras.net" class="link-text">info@cineyletras.net</a>. <strong>Información adicional:</strong> puede
-          ampliar la información en el enlace de <a href="" class="link-text">Aviso Legal</a> y <a href="" class="link-text">Política de
+          acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a href="mailto:info@cineyletras.net"
+            class="link-text">info@cineyletras.net</a>. <strong>Información adicional:</strong> puede
+          ampliar la información en el enlace de <a href="" class="link-text">Aviso Legal</a> y <a href=""
+            class="link-text">Política de
             privacidad</a>.</small></p>
 
       <div class="checkbox">

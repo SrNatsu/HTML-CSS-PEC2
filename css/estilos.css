@@ -402,20 +402,21 @@ textarea:focus {
   box-shadow: 0 0 5px var(--secondary-color);
 }
 
-input:required:user-invalid,
-select:required:user-invalid,
-textarea:required:user-invalid {
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
   border-color: #ff0000;
 }
 
-input:required:user-valid,
-select:required:user-valid,
-textarea:required:user-valid {
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
   border-color: #4caf50;
 }
 
 textarea {
   height: 8rem;
+  padding: 1rem;
 }
 
 .checkbox, .radio {
@@ -442,12 +443,34 @@ fieldset:nth-child(2), fieldset:nth-child(3) {
   grid-template-columns: 1fr 1fr;
 }
 
-legend, .label {
+div.genres > fieldset {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+div.genres > fieldset > legend, fieldset > fieldset > legend {
+  text-transform: none;
+  font-size: 1.2rem;
+}
+
+fieldset:nth-child(4) > fieldset {
+  padding-left: 0;
+}
+
+fieldset:nth-child(5) > fieldset {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
   text-transform: uppercase;
   border: 1px solid var(--primary-color);
   background-color: var(--white);
   width: fit-content;
   padding: 0 .5rem;
+  font-size: 1.2rem;
 }
 
 /*
@@ -479,11 +502,6 @@ address {
 .genres {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.label {
-  margin-bottom: 1rem;
-  text-transform: none;
 }
 
 form > p:nth-child(6) {
